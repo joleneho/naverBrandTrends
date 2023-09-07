@@ -254,9 +254,11 @@ instructions_placeholder.markdown("""
 <style>
     .instr-box {
         border-radius: 10px;
-        padding: 5px;
+        padding: 10px;
         background-color: #FFD1D1;
         font-size: 0.7em;
+        max-width: 80%;  /* Set a max width, adjust this percentage as needed */
+        margin: auto;  
     }
 </style>
 <div class="instr-box">
