@@ -231,7 +231,19 @@ keywords_default = {}
 for key, value in keywords_default_df.values.tolist():
     keywords_default[key] = value
 
-st.title("Naver Keyword Trends")
+st.markdown("""
+<style>
+    .title-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<div class="title-center">
+    <h1>Naver Keyword Trends</h1>
+</div>
+""", unsafe_allow_html=True)
+
 
 st.sidebar.title("Select Filters")
 
