@@ -244,10 +244,10 @@ instructions_placeholder.markdown("""
     }
 </style>
 <div class="instr-box">
-To use custom keyword group:
-    a. Select "Insert Custom Keyword Group" under "Select Builtin Keywords"
-    b. Key in a title for your Keyword Group.
-    c. Key in your keywords (not more than 20 and separated by a comma ",") in the Keywords section.
+To use custom keyword group:<br>
+    a. Select "Insert Custom Keyword Group" under "Select Builtin Keywords"<br>
+    b. Key in a title for your Keyword Group.<br>
+    c. Key in your keywords (not more than 20 and separated by a comma ",") in the Keywords section.<br>
     d. Make your selections to the remaining fields and click the "submit button"
 </div>
 """, unsafe_allow_html=True)
