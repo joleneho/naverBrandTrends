@@ -7,6 +7,48 @@ import numpy as np
 import os
 from Download_special import download_button
 
+<style>
+    body {
+        font-family: 'Adobe Clean', Arial, sans-serif;
+        background-color: #FFF; /* You can change this to a lighter shade of the Lighter Red to give a mild Adobe feel */
+        color: #333; /* This is a mild dark gray for general text */
+    }
+
+    .title-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FF0000; /* Adobe Red */
+        color: #FFF; /* White color for text against Adobe Red */
+        padding: 10px 0;
+    }
+
+    .instr-box {
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #FFD1D1; /* Using the Lighter Red you provided */
+        font-size: 0.9em;
+        margin: 15px 0; /* Added margin for spacing */
+    }
+
+    .streamlit-sidebar {
+        background-color: #FFD1D1; /* This makes the sidebar the Lighter Red */
+    }
+
+    button, input[type="submit"] {
+        background-color: #FF0000; /* Adobe Red for buttons */
+        color: #FFF; /* White text on buttons */
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover, input[type="submit"]:hover {
+        background-color: #D10000; /* A darker shade when hovering over buttons */
+    }
+</style>
+
 BUILTIN_KEYWORDS_URL = "https://docs.google.com/spreadsheets/d/1tYX4LhPLGzjyhCcjd1chPS4xmJcvqRyMWTvsxSlOdIo/edit?usp=sharing"
 API_KEY_URL = "https://docs.google.com/spreadsheets/d/19HqWX4soa_ODZMn2V1XV0lfkgovU10Quvu1ysr2fwlo/edit?usp=sharing"
 api_keys_df = pd.read_csv(API_KEY_URL.replace("/edit?usp=sharing", "/export?format=csv&gid=0"))
