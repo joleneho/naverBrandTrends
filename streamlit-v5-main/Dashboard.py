@@ -253,7 +253,7 @@ instructions_placeholder = st.empty()
 instructions_placeholder.markdown("""
 <style>
     .instr-box {
-        border-radius: 10px;
+        border-radius: 8px;
         padding: 10px;
         background-color: #FFD1D1;
         font-size: 0.7em;
