@@ -264,7 +264,7 @@ else:
 start_date = st.sidebar.date_input('Start Date', min_value=date(2016, 1, 1), value=(datetime.today().replace(day=1)).date(), max_value=(date.today()- timedelta(days=1)))
 end_date = st.sidebar.date_input('End Date', min_value=date(2016, 1, 1), max_value=date.today())
 
-st.markdown("Made with ❤️ by the APAC SEO team")
+st.markdown("Made with ❤️ by the APAC SEO Team")
 
 # Data type selection
 data_options = ['date', 'week', 'month']
