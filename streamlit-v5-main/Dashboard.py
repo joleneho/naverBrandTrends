@@ -232,37 +232,6 @@ for key, value in keywords_default_df.values.tolist():
 
 st.title("Naver Keyword Trends")
 st.sidebar.title("Select Filters")
-# For the title "Naver Keyword Trends"
-st.markdown("""
-<style>
-.center-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;  # Optional: adjust font size as needed
-}
-</style>
-<div class="center-title">
-    Naver Keyword Trends
-</div>
-""", unsafe_allow_html=True)
-
-# Your application's content goes here...
-
-# For the "Made with xxx Team"
-st.markdown("""
-<style>
-.center-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;  # Optional: adjust font size as needed
-}
-</style>
-<div class="center-footer">
-    Made with xxx Team
-</div>
-""", unsafe_allow_html=True)
 
 instructions_placeholder = st.empty()
 
