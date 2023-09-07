@@ -236,7 +236,7 @@ title = "Naver Keyword Trends"
 
 st.markdown(
     f"""
-    <div style="display: flex; align-items: center;">
+    <div style="display: flex; align-items: center; justify-content: center; margin: auto;">
         <img src="{logo_url}" height="50px" style="margin-right: 10px;"> 
         <h1>{title}</h1>
     </div>
@@ -256,7 +256,7 @@ instructions_placeholder.markdown("""
         border-radius: 10px;
         padding: 10px;
         background-color: #FFD1D1;
-        font-size: 0.9em;
+        font-size: 0.7em;
     }
 </style>
 <div class="instr-box">
