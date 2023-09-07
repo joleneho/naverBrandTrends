@@ -231,18 +231,19 @@ keywords_default = {}
 for key, value in keywords_default_df.values.tolist():
     keywords_default[key] = value
 
-st.markdown("""
-<style>
-    .title-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
-<div class="title-center">
-    <h1>Naver Keyword Trends</h1>
-</div>
-""", unsafe_allow_html=True)
+logo_url = "https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg"
+title = "Naver Keyword Trends"
+
+st.markdown(
+    f"""
+    <div style="display: flex; align-items: center;">
+        <img src="{logo_url}" height="50px" style="margin-right: 10px;"> 
+        <h1>{title}</h1>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
+
 
 
 st.sidebar.title("Select Filters")
