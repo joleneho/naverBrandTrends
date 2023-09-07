@@ -232,15 +232,56 @@ for key, value in keywords_default_df.values.tolist():
 
 st.title("Naver Keyword Trends")
 st.sidebar.title("Select Filters")
+# For the title "Naver Keyword Trends"
+st.markdown("""
+<style>
+.center-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;  # Optional: adjust font size as needed
+}
+</style>
+<div class="center-title">
+    Naver Keyword Trends
+</div>
+""", unsafe_allow_html=True)
+
+# Your application's content goes here...
+
+# For the "Made with xxx Team"
+st.markdown("""
+<style>
+.center-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;  # Optional: adjust font size as needed
+}
+</style>
+<div class="center-footer">
+    Made with xxx Team
+</div>
+""", unsafe_allow_html=True)
 
 instructions_placeholder = st.empty()
 
-instructions_placeholder.text("""To use custom keyword group:
-a. Select "Insert Custom Keyword Group" under "Select Builtin Keywords"
-b. Key in a title for your Keyword Group.
-c. Key in your keywords (not more than 20 and separated by a comma ",") in the\n    Keywords section.
-d. Make your selections to the remaining fields and click the "submit button"
-""")
+instructions_placeholder.markdown("""
+<style>
+    .instr-box {
+        border-radius: 10px;
+        padding: 10px;
+        background-color: #FFD1D1;
+    }
+</style>
+<div class="instr-box">
+To use custom keyword group:
+    a. Select "Insert Custom Keyword Group" under "Select Builtin Keywords"
+    b. Key in a title for your Keyword Group.
+    c. Key in your keywords (not more than 20 and separated by a comma ",") in the Keywords section.
+    d. Make your selections to the remaining fields and click the "submit button"
+</div>
+""", unsafe_allow_html=True)
 
 keywords_options = list(keywords_default.keys())
 keywords_options_withother = list(keywords_default.keys())
