@@ -7,7 +7,7 @@ import numpy as np
 import os
 from Download_special import download_button
 
-<style>
+st.markdown(<style>
     body {
         font-family: 'Adobe Clean', Arial, sans-serif;
         background-color: #FFF; /* You can change this to a lighter shade of the Lighter Red to give a mild Adobe feel */
@@ -47,7 +47,7 @@ from Download_special import download_button
     button:hover, input[type="submit"]:hover {
         background-color: #D10000; /* A darker shade when hovering over buttons */
     }
-</style>
+</style>)
 
 BUILTIN_KEYWORDS_URL = "https://docs.google.com/spreadsheets/d/1tYX4LhPLGzjyhCcjd1chPS4xmJcvqRyMWTvsxSlOdIo/edit?usp=sharing"
 API_KEY_URL = "https://docs.google.com/spreadsheets/d/19HqWX4soa_ODZMn2V1XV0lfkgovU10Quvu1ysr2fwlo/edit?usp=sharing"
