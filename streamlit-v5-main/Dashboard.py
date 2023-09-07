@@ -236,14 +236,13 @@ title = "Naver Keyword Trends"
 
 st.markdown(
     f"""
-    <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
-        <div style="display: flex; align-items: center; justify-content: center;">
-            <img src="{logo_url}" height="50px" style="margin-right: 10px;"> 
-            <h1>{title}</h1>
-        </div>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <img src="{logo_url}" height="50px" style="margin-right: 10px;"> 
+        <h1>{title}</h1>
     </div>
     """, 
     unsafe_allow_html=True
+)
 )
 
 
