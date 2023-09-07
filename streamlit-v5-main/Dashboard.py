@@ -230,7 +230,19 @@ keywords_default = {}
 for key, value in keywords_default_df.values.tolist():
     keywords_default[key] = value
 
-st.title("Naver Keyword Trends")
+st.markdown("""
+<style>
+    .title-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<div class="title-center">
+    <h1>Naver Keyword Trends</h1>
+</div>
+""", unsafe_allow_html=True)
+
 st.sidebar.title("Select Filters")
 
 instructions_placeholder = st.empty()
@@ -241,6 +253,7 @@ instructions_placeholder.markdown("""
         border-radius: 10px;
         padding: 10px;
         background-color: #FFD1D1;
+        font-size: 0.9em;
     }
 </style>
 <div class="instr-box">
@@ -274,7 +287,19 @@ else:
 start_date = st.sidebar.date_input('Start Date', min_value=date(2016, 1, 1), value=(datetime.today().replace(day=1)).date(), max_value=(date.today()- timedelta(days=1)))
 end_date = st.sidebar.date_input('End Date', min_value=date(2016, 1, 1), max_value=date.today())
 
-st.markdown("Made with ❤️ by the APAC SEO Team")
+st.markdown("""
+<style>
+    .center-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<div class="center-text">
+    Made with ❤️ by the APAC SEO Team
+</div>
+""", unsafe_allow_html=True)
+
 
 # Data type selection
 data_options = ['date', 'week', 'month']
