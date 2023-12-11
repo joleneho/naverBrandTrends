@@ -263,7 +263,8 @@ instructions_placeholder.markdown("""
     }
 
     .instr-box::first-line {
-        font-size: 2em; /* Adjust the font size as needed */
+        font-size: 1.3em; /* Adjust the font size as needed */
+        font-weight: bold; /* Makes the first line bold */
         
 </style>
 <div class="instr-box">
