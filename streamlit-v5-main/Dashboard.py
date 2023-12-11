@@ -257,17 +257,21 @@ instructions_placeholder.markdown("""
         border-radius: 10px;
         padding: 10px;
         background-color: #FFD1D1;
-        font-size: 0.7em;
+        font-size: 0.8em;
         max-width: 80%;  /* Set a max width, adjust this percentage as needed */
         margin: auto;  
     }
+
+    .instr-box::first-line {
+        font-size: 2em; /* Adjust the font size as needed */
+        
 </style>
 <div class="instr-box">
-To use custom keyword group:<br>
-    a. Select "Insert Custom Keyword Group" under "Select Builtin Keywords"<br>
+Want to see trends of your own keywords?<br>
+    a. Select "Insert Custom Keyword Group" under "Select Built-in Keywords"<br>
     b. Key in a title for your Keyword Group.<br>
-    c. Key in your keywords (not more than 20 and separated by a comma ",") in the Keywords section.<br>
-    d. Make your selections to the remaining fields and click the "submit button"
+    c. Input up to 20 keywords separated by comma in the Keywords section.<br>
+    d. Make your selections to the remaining parameters and click the "submit button"
 </div>
 """, unsafe_allow_html=True)
 
