@@ -1,5 +1,5 @@
 import streamlit as st
-from api import API
+from api import API, construct_chart
 from datetime import date, datetime, timedelta
 import plotly.express as px
 import pandas as pd
@@ -53,7 +53,7 @@ def name_calculate(device, gender, age):
     if output == "":output = "All"
     return output
 
-def constuct_chart(start_date:date, end_date:date, genders:list, devices:list, ages:list, timeunit:str, keyword_group:list, keywords:list, Denominator:float):
+def construct_chart(start_date:date, end_date:date, genders:list, devices:list, ages:list, timeunit:str, keyword_group:list, keywords:list, Denominator:float):
     global api_keys_df    
     tabs = st.tabs(keyword_group)
 
