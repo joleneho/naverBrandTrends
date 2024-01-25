@@ -1,5 +1,5 @@
 import streamlit as st
-from api import API, construct_chart
+from api import API
 from datetime import date, datetime, timedelta
 import plotly.express as px
 import pandas as pd
