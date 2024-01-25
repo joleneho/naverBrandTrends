@@ -350,14 +350,20 @@ submit = st.sidebar.button('Submit')
 if submit:
     
     if "Insert custom keyword group" in keyword_selection:
-        keywordgroup_process = keyword_selection
-        keywordgroup_process.extend([i.removeprefix(" ").removesuffix(" ") for i in Keyword_group.split(",")])
-        keywordgroup_process.remove("Insert custom keyword group")
-
-        keyword_process = [keywords_default[k].split(",") for k in keyword_selection]
-        keyword_process.extend([k.split(",") for k in Keywords.replace("\\", "/").split("/")])
+        # Process the custom keyword group separately
+        keywordgroup_process = [k for k in keyword_selection if k in keywords_default]  # Only process known keywords
+        keywordgroup_process.extend([i.strip() for i in Keyword_group.split(",")])
+        keywordgroup_process = list(filter(lambda k: k != "Insert custom keyword group", keywordgroup_process))  # Remove the 'Insert custom keyword group' entry
+        
+        # Process keywords from keywords_default
+        keyword_process = [keywords_default[k].split(",") for k in keywordgroup_process if k in keywords_default]
+        # Process custom keywords
+        custom_keywords = [k.strip() for k in Keywords.replace("\\", "/").split("/")]
+        keyword_process.extend([k.split(",") for k in custom_keywords])
     else:
-        keywordgroup_process = keyword_selection
-        keyword_process = [keywords_default[k].split(",") for k in keyword_selection]
+        keywordgroup_process = [k for k in keyword_selection if k in keywords_default]  # Only process known keywords
+        keyword_process = [keywords_default[k].split(",") for k in keywordgroup_process]
 
-    constuct_chart(start_date, end_date, selected_gender, selected_device, selected_age, selected_data, keywordgroup_process, keyword_process, float(Denominator))
+    # Construct the chart with the processed keywords
+    construct_chart(start_date, end_date, selected_gender, selected_device, selected_age, selected_data, keywordgroup_process, keyword_process, float(Denominator))
+
